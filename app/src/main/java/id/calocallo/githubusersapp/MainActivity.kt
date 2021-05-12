@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.view.View
+import android.widget.Toast
 import androidx.appcompat.widget.SearchView
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -49,6 +51,10 @@ class MainActivity : AppCompatActivity() {
             adapter.setOnClickItemListener {
                 startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(it.html_url)))
             }
+        })
+        viewModel.getError.observe(this, {
+            binding.rlNoData.root.visibility = View.VISIBLE
+            Toast.makeText(this, it, Toast.LENGTH_SHORT).show()
         })
 
         //scrolllistener

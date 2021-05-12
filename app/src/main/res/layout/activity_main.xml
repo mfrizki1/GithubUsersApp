@@ -10,10 +10,15 @@
     <androidx.appcompat.widget.SearchView
         android:id="@+id/sv_users"
         android:layout_width="match_parent"
-        android:layout_margin="12dp"
         android:layout_height="wrap_content"
+        android:layout_margin="12dp"
         android:background="@drawable/bg_roudable"
         android:inputType="text" />
+
+    <include
+        android:id="@+id/rl_no_data"
+        layout="@layout/no_data"
+        android:visibility="gone" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_users"
