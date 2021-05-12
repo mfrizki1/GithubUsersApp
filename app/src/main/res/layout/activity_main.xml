@@ -7,6 +7,14 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:text="Github Users"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
     <androidx.appcompat.widget.SearchView
         android:id="@+id/sv_users"
         android:layout_width="match_parent"
